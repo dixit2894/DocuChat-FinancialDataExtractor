@@ -100,7 +100,7 @@ def get_vectorstore(text_chunks):
     return vectorstore
 
 def get_conversion_chain(vectorstore):
-    chat = ChatGroq(temperature=0.7, groq_api_key="your_api_key", model_name="llama-3.3-70b-versatile")
+    chat = ChatGroq(temperature=0, groq_api_key="your_api_key", model_name="llama-3.3-70b-versatile")
 
     memory = ConversationBufferMemory(
         memory_key='chat_history',
